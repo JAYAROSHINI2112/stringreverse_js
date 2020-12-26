@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Reverse| String
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .form-control {
+            width: 400px;
+        }
+        
+        .jumbotron {
+            height: 50%;
+            width: 100%;
+            margin-top: 130px;
+        }
+        
+        .btn {
+            margin-top: 40px;
+        }
+        
+        .card {
+            width: 300px;
+            height: 100px;
+            background-color: rgba(118, 126, 245, 0.911);
+            color: #fff;
+            padding: 3px;
+            font-size: 17px;
+        }
+        
+        .title {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h3>DSC -Technical Recruitment</h3>
+        <h4>[Hackathon Assessment-Web Front-end]</h4>
+    </div>
+    <p>
+        <button type="button" class="btn btn-primary">
+            Developer Student Clubs <span class="badge badge-light">DSC</span>
+          </button>
+
+        <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+         Click Me!
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card">
+            <h5 class="card-title">Note </h5>
+            <p class="card-text "> Reversing a string or integer using javascript,html,css,bootstrap.</p>
+        </div>
+
+    </div>
+    </div>
+    <div class="container">
+        <div class="jumbotron">
+            <h2 class="display-4">Enter the String </h2>
+
+            <div class="form-outline form-white">
+                <input type="text" class="form-control" name="inputText" id="inputText" required>
+                <br><br>
+                <button type="button" class="btn btn-primary btn-lg" onclick="reverseString()"> Submit </button>
+                <br><br>
+            </div>
+            <div class="resultText">
+                <p id="reveserStringResult"> </p>
+                <p id="result"> </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function reverseString() {
+            input = document.getElementById("inputText").value;
+            if (input == '') {
+                document.getElementById("reveserStringResult").innerHTML = '';
+                document.getElementById("result").style.color = "red";
+                document.getElementById("result").innerHTML = "Please Enter a Valid Text ";
+                return;
+            }
+            let reverseResult = "";
+            document.getElementById("result").innerHTML = '';
+            for (var i = input.length - 1; i >= 0; i--) {
+                reverseResult = reverseResult + input[i];
+            }
+            document.getElementById("result").style.color = "blue";
+            document.getElementById("reveserStringResult").innerHTML = "Reversed String: " + reverseResult;
+        }
+    </script>
+
+
+</body>
+
+</html>
